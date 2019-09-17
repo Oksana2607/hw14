@@ -46,8 +46,8 @@ export default class App extends Component {
         _id: '5d7b70327bc20e0fe81f4ebe', name: 'alex', email: 'alex456@gmail.com', password: '145', isActive: true
       },
       _receiver_id: '',
-      activeModule: 'signin',
-      activeComponent: 'usersTable'
+      activeModule: 'main',
+      activeComponent: 'chat'
     };
 
 
@@ -55,6 +55,22 @@ export default class App extends Component {
       this.setState(state => ({
         ...state,
         activeComponent: componentName
+      }));
+    };
+
+    addMessage = (text) => {
+      const message = {
+        _id: this.state._user._id,
+        user: this.state._user.name,
+        text,
+        user_id: this.state._user._id,
+        receiver_id: this.state._receiver_id,
+        time: new Date(),
+      };
+
+      this.setState(state => ({
+        ...state,
+        _messages: [...state._messages, message]
       }));
     };
 
@@ -94,6 +110,7 @@ export default class App extends Component {
                 activeModule === 'login' && (
                 <Login
                   changeActiveModule={this.changeActiveModule}
+                  changeActiveComponent={this.changeActiveComponent}
                 />
                 )
             }
@@ -102,7 +119,9 @@ export default class App extends Component {
                   <Main
                     users={this.state._allUsers}
                     activeComponent={this.state.activeComponent}
-                    changeActiveComponent={this.state.changeActiveComponent}
+                    changeActiveModule={this.changeActiveModule}
+                    changeActiveComponent={this.changeActiveComponent}
+                    addMessage={this.addMessage}
                   />
                   )
               }

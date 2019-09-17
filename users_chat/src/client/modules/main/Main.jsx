@@ -3,15 +3,20 @@ import { UsersTable } from './components/usersTable';
 import { Chat } from './components/chat';
 
 export const Main = (props) => {
-  console.log(props);
   const {
     users,
+    addMessage,
     activeComponent,
+    changeActiveModule,
     changeActiveComponent
   } = props;
 
-  const handleClick = () => {
-    this.props.changeActiveModule('login');
+  const handleClick = (componentName) => {
+    changeActiveComponent(componentName);
+  };
+
+  const handleModule = (moduleName) => {
+    changeActiveModule(moduleName);
   };
 
   return (
@@ -25,16 +30,16 @@ export const Main = (props) => {
           <div className="user__data email" id="email">Email:</div>
         </div>
         <div className="user__logout">
-          <button className="user__logout logout" id="logoutBtn">Log out</button>
+          <button className="user__logout logout" id="logoutBtn" onClick={() => handleModule('login')}>Log out</button>
         </div>
       </div>
       <div className="wrapper__users users">
         <div className="users__buttons">
           <div className="users__button button-users">
-            <button className="button-users__btn" id="usersBtn">Users</button>
+            <button className="button-users__btn" id="usersBtn" onClick={() => handleClick('usersTable')}>Users</button>
           </div>
           <div className="users__button button-chat">
-            <button className="button-chat__btn" id="chatBtn" onClick={handleClick}>Chat</button>
+            <button className="button-chat__btn" id="chatBtn" onClick={() => handleClick('chat')}>Chat</button>
           </div>
           <div className="users__button users-chat" id="usersChat" />
         </div>
@@ -49,7 +54,11 @@ export const Main = (props) => {
             )
           }
           {
-            activeComponent === 'chat' && <Chat />
+            activeComponent === 'chat' && (
+            <Chat
+              addMessage={addMessage}
+            />
+            )
           }
         </div>
         <div className="users__change" id="chatTable" />

@@ -1,7 +1,14 @@
 import React from 'react';
 
 export const UsersRow = (props) => {
-  const { user } = props;
+  const {
+    user,
+    changeActiveComponent
+  } = props;
+
+  const handleClick = (componentName) => {
+    changeActiveComponent(componentName);
+  };
 
   return (
     <tr className="body">
@@ -11,7 +18,7 @@ export const UsersRow = (props) => {
       <td>{user.name}</td>
       <td>{user.email}</td>
       <td>
-        <button id="{user._id}" className="private_chat" onClick="handleUserClick(id)">Private Chat</button>
+        <button id="{user._id}" className="private_chat" onClick={() => handleClick('chat')}>Private Chat</button>
       </td>
     </tr>
   );
