@@ -1,28 +1,29 @@
 import React from 'react';
 import { UsersRow } from '../usersRow';
 
-
 export const UsersTable = (props) => {
   const {
     users,
+    activeUsers,
     changeActiveComponent
   } = props;
 
   return (
-    <div className="users__table" id="usersTable">
-      <table className="users__table table" id="table">
-        <thead className="table__header header">
-          <tr className="header">
+    <div className='users__table' id='usersTable'>
+      <table className='users__table table' id='table'>
+        <thead className='table__header header'>
+          <tr className='header'>
             <th>Status</th>
             <th>Name</th>
             <th>Email</th>
             <th />
           </tr>
         </thead>
-        <tbody className="table__body body">
+        <tbody className='table__body body'>
           {users.map(item => (
             <UsersRow
               changeActiveComponent={changeActiveComponent}
+              activeUsers={activeUsers}
               key={item._id}
               user={item}
             />
@@ -32,3 +33,4 @@ export const UsersTable = (props) => {
     </div>
   );
 };
+

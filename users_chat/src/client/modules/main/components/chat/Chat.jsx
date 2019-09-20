@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { ChatMessage } from '../chatMessage';
 
 export const Chat = (props) => {
-  const { addMessage } = props;
+  const { addMessage, messages, user } = props;
   const [message, setMessage] = useState('');
   const handleClick = () => {
     console.log(message);
@@ -9,20 +10,30 @@ export const Chat = (props) => {
     setMessage('');
   };
 
+
+
   return (
-    <div className="users__chat chat" id="chat">
-      <div className="chat__title">Chat</div>
-      <div className="chat__body">
-        <div className="chat__content" id="chatContent" />
-        <div className="chat__footer">
+    <div className='users__chat chat' id='chat'>
+      <div className='chat__title'>Chat</div>
+      <div className='chat__body'>
+        <div className='chat__content' id='chatContent'>
+          {messages.map((message, index) => (
+            <ChatMessage
+              key={index}
+              message={message}
+              user={user}
+            />
+          ))}
+        </div>
+        <div className='chat__footer'>
           <input
-            type="text"
-            className="chat__input"
-            id="message"
+            type='text'
+            className='chat__input'
+            id='message'
             value={message}
             onChange={event => setMessage(event.target.value)}
           />
-          <button className="chat__button" id="sendBtn" onClick={handleClick}>Send</button>
+          <button className='chat__button' id='sendBtn' onClick={handleClick}>Send</button>
         </div>
       </div>
     </div>

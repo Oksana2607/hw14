@@ -8,19 +8,19 @@ module.exports = {
   entry: ['babel-polyfill', './src/client/index.js'],
   output: {
     path: path.join(__dirname, outputDirectory),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   module: {
     rules: [{
       test: /\.(js|jsx)$/,
       exclude: /node_modules/,
       use: {
-        loader: 'babel-loader'
-      }
+        loader: 'babel-loader',
+      },
     },
     {
       test: /\.css$/,
-      use: ['style-loader', 'css-loader']
+      use: ['style-loader', 'css-loader'],
     },
     {
       test: /\.less$/,
@@ -38,25 +38,30 @@ module.exports = {
     },
     {
       test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-      loader: 'url-loader?limit=100000'
-    }
-    ]
+      loader: 'url-loader?limit=100000',
+    },
+    ],
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ['*', '.js', '.jsx'],
   },
   devServer: {
     port: 3000,
     open: true,
     proxy: {
-      '/api': 'http://localhost:5000'
-    }
+      '/api/**': {
+        target: 'http://localhost:3001',
+        pathRewrite: { '^/api': '' },
+        secure: false,
+        changeOrigin: true,
+      },
+    },
   },
   plugins: [
     new CleanWebpackPlugin([outputDirectory]),
     new HtmlWebpackPlugin({
       template: './public/index.html',
-      favicon: './public/favicon.ico'
-    })
-  ]
+      favicon: './public/favicon.ico',
+    }),
+  ],
 };
