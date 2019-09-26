@@ -1,18 +1,14 @@
-// import React from 'react';
-import {UsersTable} from './components/usersTable';
-import {Chat} from './components/chat';
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-// import {withTranslation} from 'react-i18next';
+import { UsersTable } from './components/usersTable';
+import { Chat } from './components/chat';
+import React, { PureComponent } from 'react';
 import withAuthorization from '../../hoc/withAuthorization';
+import PropTypes from 'prop-types';
 
 let ws = null;
 
-class Main extends Component {
-
+class Main extends PureComponent {
     state = {
         user: {},
-        lang: 'GB',
         receiver: '',
         messages: [],
         allUsers: [],
@@ -23,24 +19,42 @@ class Main extends Component {
         emojiesMenu: false,
     };
 
+    componentDidUpdate(prevProps, prevState) {
+        const { theme } = this.state;
+        const { theme: prevTheme } = prevState;
+
+        if (prevTheme !== theme) {
+            document.documentElement.className = theme;
+            document.getElementById('toggleBtn').className = theme;
+            document.documentElement.setAttribute('data-theme', theme);
+        }
+    }
+
+    async componentDidMount() {
+        await this.initWs();
+        await this.getUserFromLS();
+        await this.changeActiveComponent('usersTable');
+        await this.getAllUsers();
+        await this.toggleTheme();
+    }
+
     toggleTheme = () => {
         const theme = this.state.theme === 'light' ? 'dark' : 'light';
-        document.documentElement.className = theme;
-        this.setState({theme});
 
-        document.getElementById('toggleBtn').className = theme;
-
-        document.documentElement.setAttribute('data-theme', theme);
+        this.setState(state => ({
+            ...state,
+            theme,
+        }));
     };
 
-    changeActiveComponent = (componentName) => {
+    changeActiveComponent = componentName => {
         this.setState(state => ({
             ...state,
             activeComponent: componentName,
         }));
     };
 
-    addMessage = (text) => {
+    addMessage = text => {
         const message = {
             type: 'USER_MESSAGE',
             username: this.state.user.name,
@@ -60,7 +74,7 @@ class Main extends Component {
     };
 
     //добавляем сообщения из базы и чужие сообщения
-    addMessageFromDB = (messageObj) => {
+    addMessageFromDB = messageObj => {
         switch (messageObj.type) {
             case 'ACTIVE_USERS':
                 this.setState(state => ({
@@ -77,8 +91,8 @@ class Main extends Component {
         // this.dialogWindowScrollDown();
     };
 
-    getAllUsers = () => {
-        fetch('http://localhost:8080/users', {
+    getAllUsers = async () => {
+        const data = await fetch('http://localhost:8080/users', {
             method: 'POST', // или 'PUT'
             mode: 'cors',
             // credentials: 'include',
@@ -86,31 +100,22 @@ class Main extends Component {
             headers: {
                 'Content-Type': 'application/json',
             },
-        }).then(res => res.json())
-            .then((response) => {
-                    this.addUsers(response);
-                },
-                (error) => {
-                    alert(`Error321:${error}`);
-                });
+        });
+
+        await this.addUsers(await data.json());
     };
 
-    addUsers = (users) => {
-        this.setState(state => ({
+    addUsers = users => this.setState(state => ({
             ...state,
             allUsers: [...state.allUsers, ...users],
         }));
-    };
 
     initWs = () => {
-        if (ws) {
-            ws.close();
-        }
+        ws && ws.close();
 
         ws = new WebSocket('ws://localhost:4000');
 
         ws.onopen = () => {
-            // console.log('onopen');
             this.sendMessage({
                 type: 'USER_CONNECT',
                 user: this.state.user.name,
@@ -121,26 +126,19 @@ class Main extends Component {
             });
         };
 
-        ws.onmessage = message => {
-            // console.log('message');
-            this.addMessageFromDB(JSON.parse(message.data));
-        };
+        ws.onmessage = message => this.addMessageFromDB(JSON.parse(message.data));
 
-        ws.onclose = () => {
-            // console.log('onclose', 2);
-        };
+        ws.onclose = () => {};
     };
 
-    sendMessage = (data) => {
-        // console.log('sendMessage', data);
-        ws.send(JSON.stringify(data));
-    };
+    sendMessage = data => ws.send(JSON.stringify(data));
 
     logOut = () => {
         if (ws) {
             ws.close();
             ws = null;
         }
+
         localStorage.setItem('user', '');
         window.location.href = '/';
     };
@@ -152,6 +150,7 @@ class Main extends Component {
             () => document.removeEventListener('click', this.closeEmojiMenu)
         );
     };
+
     showEmojis = () => {
         this.setState({
                 emojisMenu: true,
@@ -169,60 +168,66 @@ class Main extends Component {
     };
 
     getUserFromLS = () => {
-        const data = JSON.parse(window.localStorage.getItem('user'));
+        const user = JSON.parse(window.localStorage.getItem('user'));
+
         this.setState(state => ({
             ...state,
-            user: data,
+            user,
         }));
     };
 
-    async componentDidMount() {
-        await this.initWs();
-        await this.getUserFromLS();
-        await this.changeActiveComponent('usersTable');
-        await this.getAllUsers();
-        await this.toggleTheme();
-    }
-
     render() {
-        const {t} = this.props;
-        return (
+        const { t } = this.props;
+        const {
+            user,
+            activeComponent,
+        } = this.state;
 
+        return (
             <div className='wrapper'>
                 <div className='wrapper__header header'>
-                    <h1 className='header__title'>{t('users')}</h1>
+                    <h1 className='header__title'>{ t('users') }</h1>
                 </div>
                 <div className='wrapper__user user'>
                     <div className='user__data'>
-                        <div className='user__data name' id='nameActive'>{t('name')}: {this.state.user.name}</div>
-                        <div className='user__data email' id='emailActive'>{t('eMail')}: {this.state.user.email}</div>
+                        <div className='user__data name' id='nameActive'>{ t('name') }: { user.name }</div>
+                        <div className='user__data email' id='emailActive'>{ t('eMail') }: { user.email }</div>
                     </div>
                     <div className='user__logout'>
-                        <button className='user__logout toggleTheme' onClick={this.toggleTheme}>
+                        <button className='user__logout toggleTheme' onClick = {this.toggleTheme}>
                             <p id='toggleBtn'>
-                                <i className='fas fa-moon'></i>
-                                <i className='fas fa-sun'></i>
+                                <i className='fas fa-moon'/>
+                                <i className='fas fa-sun'/>
                             </p>
                         </button>
-                        <button className='user__logout logout' id='logoutBtn'
-                                onClick={this.logOut}>{t('logOut')}</button>
+                        <button id='logoutBtn'
+                                onClick = {this.logOut}
+                                className='user__logout logout'
+                                children = {t('logOut')}
+                        />
                     </div>
                 </div>
                 <div className='wrapper__users users'>
                     <div className='users__buttons'>
                         <div className='users__button button-users'>
-                            <button className='button-users__btn' id='usersBtn'
-                                    onClick={() => this.changeActiveComponent('usersTable')}>{t('users')}</button>
+                            <button id='usersBtn'
+                                    className='button-users__btn'
+                                    onClick = {() => this.changeActiveComponent('usersTable')}
+                                    children={t('users')}
+                            />
                         </div>
                         <div className='users__button button-chat'>
-                            <button className='button-chat__btn' id='chatBtn'
-                                    onClick={() => this.changeActiveComponent('chat')}>{t('chat')}</button>
+                            <button id='chatBtn'
+                                    className='button-chat__btn'
+                                    onClick={() => this.changeActiveComponent('chat')}
+                                    children={t('chat')}
+                            />
                         </div>
-                        <div className='users__button users-chat' id='usersChat'/>
+                        <div id='usersChat' className='users__button users-chat'/>
                     </div>
-                    <div className='users__change' id='usersTable'>
+                    <div id='usersTable' className='users__change'>
                         {
-                            this.state.activeComponent === 'usersTable' && (
+                            activeComponent === 'usersTable' ? (
                                 <UsersTable
                                     t={t}
                                     my_user={this.state.user}
@@ -231,10 +236,10 @@ class Main extends Component {
                                     activeComponent={this.state.activeComponent}
                                     changeActiveComponent={this.changeActiveComponent}
                                 />
-                            )
+                            ) : null
                         }
                         {
-                            this.state.activeComponent === 'chat' && (
+                            activeComponent === 'chat' ? (
                                 <Chat
                                     t={t}
                                     addMessage={this.addMessage}
@@ -244,35 +249,18 @@ class Main extends Component {
                                     showEmojis={this.showEmojis}
                                     closeMenu={this.closeEmojiMenu}
                                 />
-                            )
+                            ) : null
                         }
                     </div>
-                    <div className='users__change' id='chatTable'/>
+                    <div id='chatTable' className='users__change'/>
                 </div>
             </div>
         );
     }
 }
-// Main.propTypes = {
-//     t: PropTypes.func.isRequired,
-//     users: PropTypes.array.isRequired,
-//     logOut: PropTypes.func.isRequired,
-//     messages: PropTypes.array.isRequired,
-//     addMessage: PropTypes.func.isRequired,
-//     user: PropTypes.shape({
-//         name: PropTypes.string.isRequired,
-//         email: PropTypes.string.isRequired,
-//     }).isRequired,
-//     toggleTheme: PropTypes.func.isRequired,
-//     activeUsers: PropTypes.array.isRequired,
-//     activeComponent: PropTypes.string.isRequired,
-//     changeActiveModule: PropTypes.func.isRequired,
-//     changeActiveComponent: PropTypes.func.isRequired,
-//     addEmojis: PropTypes.func.isRequired,
-//     emojisMenu: PropTypes.func.isRequired,
-//     showEmojis: PropTypes.func.isRequired,
-//     closeMenu: PropTypes.func.isRequired,
-// };
 
-// export default React.memo(withTranslation('common')(Main));
-export default withAuthorization(React.memo(Main));
+Main.propTypes = {
+    t: PropTypes.func.isRequired,
+};
+
+export default withAuthorization(Main);

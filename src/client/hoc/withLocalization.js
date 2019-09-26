@@ -1,23 +1,27 @@
 import React from 'react';
-import { withTranslation } from 'react-i18next';
-import i18n from '../i18n';
+import { I18nextProvider, withTranslation } from 'react-i18next';
+import i18n from './../i18n';
 
-function withLocalization(Component) {
-
-    return class withLocalization extends React.Component {
-        constructor(props) {
-            super(props);
-            this.state = {
-                i18n,
-                withTranslation,
-            };
-        }
-
+export default function withLocalization(Component) {
+    class withLocalization extends React.Component {
         render() {
-            console.log(this.state, '...state1');
-            return <Component {...this.props} {...this.state} />;
+            let lang = window.localStorage.getItem('lang');
+
+            if (lang === null) lang = 'GB';
+            this.props = {
+                ...this.props,
+                lang,
+            };
+
+            if (Component) {
+                return (
+                    <I18nextProvider i18n = {i18n}>
+                        <Component {...this.props}/>
+                    </I18nextProvider>
+                );
+            }
         }
     }
-}
 
-export default withTranslation()(withLocalization);
+    return withTranslation('common')(withLocalization);
+}

@@ -40,16 +40,13 @@ export default class SignIn extends Component {
                 'Accept': 'application/json',
             },
         })
-            .then(res => res.text())
-            .then(
-                async (result) => {
-                    alert(await result);
-                    window.location.href = '/';
-                },
-                async (error) => {
-                    alert(`Error:${await JSON.parse(error)}`);
-                },
-            );
+            .then(async res => {
+                alert(await res.text());
+                window.location.href = '/';
+            })
+            .catch(async error => {
+                alert(`Error:${await JSON.parse(error)}`);
+            })
     };
 
     render() {

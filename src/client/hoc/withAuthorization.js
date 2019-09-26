@@ -1,14 +1,11 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 
 function withAuthorization(Component) {
-    return class withAuthorization extends React.Component {
+    return class withAuthorization extends PureComponent {
         componentWillCheckLS() {
             const userValidate = JSON.parse(window.localStorage.getItem('user'));
-            if (userValidate === null || userValidate === '') {
-                return false;
-            } else {
-                return true;
-            }
+
+            return !(userValidate === null || userValidate === '');
         }
 
         render() {

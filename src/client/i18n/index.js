@@ -1,5 +1,6 @@
 import i18n from 'i18next';
 import { en, ua, de, ae } from './locales';
+import { initReactI18next } from 'react-i18next'
 
 const options = {
     interpolation: {
@@ -37,6 +38,8 @@ const options = {
     },
 };
 
-i18n.init(options);
+i18n
+    .use(initReactI18next)
+    .init(options);
 
 export default i18n;

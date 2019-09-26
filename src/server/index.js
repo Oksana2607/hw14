@@ -77,7 +77,6 @@ app.post('/signInUser', async (request, res) => {
 });
 
 app.post('/users', async (request, res) => {
-    console.log('123');
     const users = await chatDal.readAllUsers();
     res.status(200).send(users);
 });

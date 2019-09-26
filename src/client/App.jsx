@@ -1,59 +1,81 @@
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import React, {Component} from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React, { Component } from 'react';
 import './app.less';
-import './matrix/themeLite.less';
-import './matrix/themeDark.less';
 import Main from './modules/main/Main.jsx';
 import Login from './modules/login/Login.jsx';
-import Signin from './modules/signin/SignIn.jsx';
+import SignIn from './modules/signin/SignIn.jsx';
 import ReactFlagsSelect from 'react-flags-select';
 import 'react-flags-select/css/react-flags-select.css';
 import PropTypes from 'prop-types';
 
-// import withLocalization from './hoc/withLocalization';
-
-import { withTranslation } from 'react-i18next';
-import i18n from './i18n';
+import withLocalization from './hoc/withLocalization';
 
 class App extends Component {
-    state = {
-            user: {},
-            lang: 'GB',
-            // receiver: '',
-            // messages: [],
-            // allUsers: [],
-            // theme: 'dark',
-            // activeUsers: [],
-            // activeModule: '',
-            // activeComponent: 'usersTable',
-            // emojiesMenu: false,
-        };
+    static propTypes = {
+        t: PropTypes.func.isRequired,
+        lang: PropTypes.string.isRequired,
+    };
 
-    changeLanguage = (lang) => {
-        this.setState({lang: lang});
+    state = {
+        user: {},
+        lang: this.props.lang,
+    };
+
+     changeLanguage = lang => {
+        const { i18n } = this.props;
+
+        this.setState(state => ({
+            ...state,
+            lang,
+        }));
+        this.setToLocalStorage('lang', lang);
         i18n.changeLanguage(lang);
     };
 
-    handleLogin = (user) => {
+    loadLanguageFromLS = () => {
+        const lang = this.getFromLocalStorage('lang');
+        if (lang !== ''){
+            this.changeLanguage(lang);
+        }else {
+            this.changeLanguage('GB');
+        }
+    };
+
+    setToLocalStorage = (item, string) => {
+        if (string) {
+            localStorage.setItem(item, string);
+        }
+    };
+
+    getFromLocalStorage = (item) => {
+        let data = window.localStorage.getItem(item);
+        if (data) return data
+    };
+
+
+    handleLogin = user => {
         this.setState(state => ({
             ...state,
-            user: user,
+            user,
         }));
     };
 
-    dialogWindowScrollDown = () => {
-        const elem = document.getElementById('chatContent');
-        console.log(elem);
-        elem.scrollTop = elem.scrollHeight;
-    };
+    // dialogWindowScrollDown = () => {
+    //     const elem = document.getElementById('chatContent');
+    //     console.log(elem);
+    //     elem.scrollTop = elem.scrollHeight;
+    // };
+
+    componentDidMount() {
+        this.loadLanguageFromLS();
+    }
 
     render() {
+        const { t } = this.props;
         const {
-            lang,
+            user,
+            lang
         } = this.state;
-
-        const { i18n, t} = this.props;
-        console.log('PROPS APP', this.props );
 
         return (
             <Router>
@@ -61,30 +83,28 @@ class App extends Component {
                     <div className='settings__item'>
                         <ReactFlagsSelect
                             className='ReactFlagsSelect'
-                            countries={['GB', 'DE', 'AE', 'UA']}
-                            customLabels={ {'GB': 'EN', 'DE': 'DE', 'AE': 'AE', 'UA': 'UA'} }
-                            defaultCountry={lang.toUpperCase()}
-                            onSelect={this.changeLanguage}
+                            countries = {['GB', 'DE', 'AE', 'UA']}
+                            customLabels = {{'GB': 'EN', 'DE': 'DE', 'AE': 'AE', 'UA': 'UA'}}
+                            onSelect = {this.changeLanguage}
+                            defaultCountry = {lang}
                         />
                     </div>
                     <Switch>
                         <Route exact path='/' render={() => (
                             <Login
-                                user={this.state.user}
+                                user={user}
                                 t={t}
                                 handleLogin={this.handleLogin}
                             />)}
                         />
                         <Route exact path='/signin' render={() => (
-                            <Signin
+                            <SignIn
                                 t={t}
                             />)}
                         />
-                        <Route exact path='/main' render={props => (
+                        <Route exact path='/main' render = {props => (
                             <Main {...props}
                                 t={t}
-                                logOut={this.logOut}
-                                toggleTheme={this.toggleTheme}
                             />)}
                         />
                     </Switch>
@@ -94,9 +114,4 @@ class App extends Component {
     }
 }
 
-App.propTypes = {
-    // t: PropTypes.func.isRequired,
-};
-
-export default withTranslation('common')(App);
-// export default withLocalization(App);
+export default withLocalization(App);
