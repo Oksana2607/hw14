@@ -40,8 +40,8 @@ export const UsersTable = (props) => {
 };
 
 UsersTable.propTypes = {
-    t: PropTypes.func.isRequired,
-    my_user: PropTypes.object.isRequired,
+    t: PropTypes.func,
+    my_user: PropTypes.object,
     users: PropTypes.arrayOf(PropTypes.object).isRequired,
     changeActiveComponent: PropTypes.func.isRequired,
     activeUsers: PropTypes.array.isRequired,

@@ -1,0 +1,22 @@
+exports["App snapshot/should render correctly(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "App",
+    "props": {
+      "user": {},
+      "lang": "GB",
+      "t": "[function]",
+      "i18n": {},
+      "tReady": false
+    }
+  },
+  "type": "App",
+  "props": {
+    "user": {},
+    "lang": "GB",
+    "t": "[function]",
+    "i18n": {},
+    "tReady": false
+  }
+};
+

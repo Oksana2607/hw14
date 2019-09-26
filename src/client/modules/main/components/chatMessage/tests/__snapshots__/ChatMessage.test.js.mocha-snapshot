@@ -1,0 +1,27 @@
+exports["ChatMessage snapshot/should render correctly(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "div",
+    "props": {
+      "className": "system-message",
+      "children": [
+        null,
+        ": ",
+        null
+      ]
+    },
+    "rendered": [
+      null,
+      ": ",
+      null
+    ]
+  },
+  "type": "div",
+  "props": {
+    "className": "system-message"
+  },
+  "children": [
+    ": "
+  ]
+};
+

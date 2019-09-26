@@ -1,0 +1,1942 @@
+exports["Login snapshot/should render correctly(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "div",
+    "props": {
+      "className": "wrapper-login",
+      "children": {
+        "type": "div",
+        "props": {
+          "className": "container",
+          "id": "container",
+          "children": [
+            {
+              "type": "div",
+              "props": {
+                "className": "container__button",
+                "action": "#",
+                "children": [
+                  {
+                    "type": "a",
+                    "props": {
+                      "className": "button__log-in button",
+                      "href": "/"
+                    },
+                    "_store": {}
+                  },
+                  {
+                    "type": "a",
+                    "props": {
+                      "className": "button__log-in button",
+                      "href": "/signin"
+                    },
+                    "_store": {}
+                  }
+                ]
+              },
+              "_store": {}
+            },
+            {
+              "type": "form",
+              "props": {
+                "className": "container-log-in",
+                "id": "logIn",
+                "onSubmit": "[function]",
+                "children": [
+                  {
+                    "type": "div",
+                    "props": {
+                      "className": "form__log-in log-in",
+                      "children": [
+                        {
+                          "type": "div",
+                          "props": {
+                            "className": "log-in__Email form_block",
+                            "children": [
+                              {
+                                "type": "label",
+                                "props": {
+                                  "htmlFor": "email_log",
+                                  "className": "input-label"
+                                },
+                                "_store": {}
+                              },
+                              {
+                                "type": "input",
+                                "props": {
+                                  "type": "email_log",
+                                  "id": "email",
+                                  "required": true,
+                                  "value": "",
+                                  "onChange": "[function]"
+                                },
+                                "_store": {}
+                              }
+                            ]
+                          },
+                          "_store": {}
+                        },
+                        {
+                          "type": "div",
+                          "props": {
+                            "className": "log-in__password form_block",
+                            "children": [
+                              {
+                                "type": "label",
+                                "props": {
+                                  "htmlFor": "password_log",
+                                  "className": "input-label"
+                                },
+                                "_store": {}
+                              },
+                              {
+                                "type": "input",
+                                "props": {
+                                  "type": "password",
+                                  "id": "password",
+                                  "required": true,
+                                  "value": "",
+                                  "onChange": "[function]"
+                                },
+                                "_store": {}
+                              }
+                            ]
+                          },
+                          "_store": {}
+                        }
+                      ]
+                    },
+                    "_store": {}
+                  },
+                  {
+                    "type": "div",
+                    "props": {
+                      "className": "form__buttonSubmit buttonSubmit",
+                      "children": {
+                        "type": "button",
+                        "props": {
+                          "className": "buttonSubmit__log-in submit__button",
+                          "id": "submitBtn",
+                          "onClick": "[function]"
+                        },
+                        "_store": {}
+                      }
+                    },
+                    "_store": {}
+                  },
+                  {
+                    "type": "div",
+                    "props": {
+                      "className": "form__error",
+                      "id": "error"
+                    },
+                    "_store": {}
+                  }
+                ]
+              },
+              "_store": {}
+            }
+          ]
+        },
+        "_store": {}
+      }
+    },
+    "rendered": {
+      "nodeType": "host",
+      "type": "div",
+      "props": {
+        "className": "container",
+        "id": "container",
+        "children": [
+          {
+            "type": "div",
+            "props": {
+              "className": "container__button",
+              "action": "#",
+              "children": [
+                {
+                  "type": "a",
+                  "props": {
+                    "className": "button__log-in button",
+                    "href": "/"
+                  },
+                  "_store": {}
+                },
+                {
+                  "type": "a",
+                  "props": {
+                    "className": "button__log-in button",
+                    "href": "/signin"
+                  },
+                  "_store": {}
+                }
+              ]
+            },
+            "_store": {}
+          },
+          {
+            "type": "form",
+            "props": {
+              "className": "container-log-in",
+              "id": "logIn",
+              "onSubmit": "[function]",
+              "children": [
+                {
+                  "type": "div",
+                  "props": {
+                    "className": "form__log-in log-in",
+                    "children": [
+                      {
+                        "type": "div",
+                        "props": {
+                          "className": "log-in__Email form_block",
+                          "children": [
+                            {
+                              "type": "label",
+                              "props": {
+                                "htmlFor": "email_log",
+                                "className": "input-label"
+                              },
+                              "_store": {}
+                            },
+                            {
+                              "type": "input",
+                              "props": {
+                                "type": "email_log",
+                                "id": "email",
+                                "required": true,
+                                "value": "",
+                                "onChange": "[function]"
+                              },
+                              "_store": {}
+                            }
+                          ]
+                        },
+                        "_store": {}
+                      },
+                      {
+                        "type": "div",
+                        "props": {
+                          "className": "log-in__password form_block",
+                          "children": [
+                            {
+                              "type": "label",
+                              "props": {
+                                "htmlFor": "password_log",
+                                "className": "input-label"
+                              },
+                              "_store": {}
+                            },
+                            {
+                              "type": "input",
+                              "props": {
+                                "type": "password",
+                                "id": "password",
+                                "required": true,
+                                "value": "",
+                                "onChange": "[function]"
+                              },
+                              "_store": {}
+                            }
+                          ]
+                        },
+                        "_store": {}
+                      }
+                    ]
+                  },
+                  "_store": {}
+                },
+                {
+                  "type": "div",
+                  "props": {
+                    "className": "form__buttonSubmit buttonSubmit",
+                    "children": {
+                      "type": "button",
+                      "props": {
+                        "className": "buttonSubmit__log-in submit__button",
+                        "id": "submitBtn",
+                        "onClick": "[function]"
+                      },
+                      "_store": {}
+                    }
+                  },
+                  "_store": {}
+                },
+                {
+                  "type": "div",
+                  "props": {
+                    "className": "form__error",
+                    "id": "error"
+                  },
+                  "_store": {}
+                }
+              ]
+            },
+            "_store": {}
+          }
+        ]
+      },
+      "rendered": [
+        {
+          "nodeType": "host",
+          "type": "div",
+          "props": {
+            "className": "container__button",
+            "action": "#",
+            "children": [
+              {
+                "type": "a",
+                "props": {
+                  "className": "button__log-in button",
+                  "href": "/"
+                },
+                "_store": {}
+              },
+              {
+                "type": "a",
+                "props": {
+                  "className": "button__log-in button",
+                  "href": "/signin"
+                },
+                "_store": {}
+              }
+            ]
+          },
+          "rendered": [
+            {
+              "nodeType": "host",
+              "type": "a",
+              "props": {
+                "className": "button__log-in button",
+                "href": "/"
+              }
+            },
+            {
+              "nodeType": "host",
+              "type": "a",
+              "props": {
+                "className": "button__log-in button",
+                "href": "/signin"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "host",
+          "type": "form",
+          "props": {
+            "className": "container-log-in",
+            "id": "logIn",
+            "onSubmit": "[function]",
+            "children": [
+              {
+                "type": "div",
+                "props": {
+                  "className": "form__log-in log-in",
+                  "children": [
+                    {
+                      "type": "div",
+                      "props": {
+                        "className": "log-in__Email form_block",
+                        "children": [
+                          {
+                            "type": "label",
+                            "props": {
+                              "htmlFor": "email_log",
+                              "className": "input-label"
+                            },
+                            "_store": {}
+                          },
+                          {
+                            "type": "input",
+                            "props": {
+                              "type": "email_log",
+                              "id": "email",
+                              "required": true,
+                              "value": "",
+                              "onChange": "[function]"
+                            },
+                            "_store": {}
+                          }
+                        ]
+                      },
+                      "_store": {}
+                    },
+                    {
+                      "type": "div",
+                      "props": {
+                        "className": "log-in__password form_block",
+                        "children": [
+                          {
+                            "type": "label",
+                            "props": {
+                              "htmlFor": "password_log",
+                              "className": "input-label"
+                            },
+                            "_store": {}
+                          },
+                          {
+                            "type": "input",
+                            "props": {
+                              "type": "password",
+                              "id": "password",
+                              "required": true,
+                              "value": "",
+                              "onChange": "[function]"
+                            },
+                            "_store": {}
+                          }
+                        ]
+                      },
+                      "_store": {}
+                    }
+                  ]
+                },
+                "_store": {}
+              },
+              {
+                "type": "div",
+                "props": {
+                  "className": "form__buttonSubmit buttonSubmit",
+                  "children": {
+                    "type": "button",
+                    "props": {
+                      "className": "buttonSubmit__log-in submit__button",
+                      "id": "submitBtn",
+                      "onClick": "[function]"
+                    },
+                    "_store": {}
+                  }
+                },
+                "_store": {}
+              },
+              {
+                "type": "div",
+                "props": {
+                  "className": "form__error",
+                  "id": "error"
+                },
+                "_store": {}
+              }
+            ]
+          },
+          "rendered": [
+            {
+              "nodeType": "host",
+              "type": "div",
+              "props": {
+                "className": "form__log-in log-in",
+                "children": [
+                  {
+                    "type": "div",
+                    "props": {
+                      "className": "log-in__Email form_block",
+                      "children": [
+                        {
+                          "type": "label",
+                          "props": {
+                            "htmlFor": "email_log",
+                            "className": "input-label"
+                          },
+                          "_store": {}
+                        },
+                        {
+                          "type": "input",
+                          "props": {
+                            "type": "email_log",
+                            "id": "email",
+                            "required": true,
+                            "value": "",
+                            "onChange": "[function]"
+                          },
+                          "_store": {}
+                        }
+                      ]
+                    },
+                    "_store": {}
+                  },
+                  {
+                    "type": "div",
+                    "props": {
+                      "className": "log-in__password form_block",
+                      "children": [
+                        {
+                          "type": "label",
+                          "props": {
+                            "htmlFor": "password_log",
+                            "className": "input-label"
+                          },
+                          "_store": {}
+                        },
+                        {
+                          "type": "input",
+                          "props": {
+                            "type": "password",
+                            "id": "password",
+                            "required": true,
+                            "value": "",
+                            "onChange": "[function]"
+                          },
+                          "_store": {}
+                        }
+                      ]
+                    },
+                    "_store": {}
+                  }
+                ]
+              },
+              "rendered": [
+                {
+                  "nodeType": "host",
+                  "type": "div",
+                  "props": {
+                    "className": "log-in__Email form_block",
+                    "children": [
+                      {
+                        "type": "label",
+                        "props": {
+                          "htmlFor": "email_log",
+                          "className": "input-label"
+                        },
+                        "_store": {}
+                      },
+                      {
+                        "type": "input",
+                        "props": {
+                          "type": "email_log",
+                          "id": "email",
+                          "required": true,
+                          "value": "",
+                          "onChange": "[function]"
+                        },
+                        "_store": {}
+                      }
+                    ]
+                  },
+                  "rendered": [
+                    {
+                      "nodeType": "host",
+                      "type": "label",
+                      "props": {
+                        "htmlFor": "email_log",
+                        "className": "input-label"
+                      }
+                    },
+                    {
+                      "nodeType": "host",
+                      "type": "input",
+                      "props": {
+                        "type": "email_log",
+                        "id": "email",
+                        "required": true,
+                        "value": "",
+                        "onChange": "[function]"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "nodeType": "host",
+                  "type": "div",
+                  "props": {
+                    "className": "log-in__password form_block",
+                    "children": [
+                      {
+                        "type": "label",
+                        "props": {
+                          "htmlFor": "password_log",
+                          "className": "input-label"
+                        },
+                        "_store": {}
+                      },
+                      {
+                        "type": "input",
+                        "props": {
+                          "type": "password",
+                          "id": "password",
+                          "required": true,
+                          "value": "",
+                          "onChange": "[function]"
+                        },
+                        "_store": {}
+                      }
+                    ]
+                  },
+                  "rendered": [
+                    {
+                      "nodeType": "host",
+                      "type": "label",
+                      "props": {
+                        "htmlFor": "password_log",
+                        "className": "input-label"
+                      }
+                    },
+                    {
+                      "nodeType": "host",
+                      "type": "input",
+                      "props": {
+                        "type": "password",
+                        "id": "password",
+                        "required": true,
+                        "value": "",
+                        "onChange": "[function]"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "nodeType": "host",
+              "type": "div",
+              "props": {
+                "className": "form__buttonSubmit buttonSubmit",
+                "children": {
+                  "type": "button",
+                  "props": {
+                    "className": "buttonSubmit__log-in submit__button",
+                    "id": "submitBtn",
+                    "onClick": "[function]"
+                  },
+                  "_store": {}
+                }
+              },
+              "rendered": {
+                "nodeType": "host",
+                "type": "button",
+                "props": {
+                  "className": "buttonSubmit__log-in submit__button",
+                  "id": "submitBtn",
+                  "onClick": "[function]"
+                }
+              }
+            },
+            {
+              "nodeType": "host",
+              "type": "div",
+              "props": {
+                "className": "form__error",
+                "id": "error"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "type": "div",
+  "props": {
+    "className": "wrapper-login"
+  },
+  "children": [
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "div",
+        "props": {
+          "className": "container",
+          "id": "container",
+          "children": [
+            {
+              "type": "div",
+              "props": {
+                "className": "container__button",
+                "action": "#",
+                "children": [
+                  {
+                    "type": "a",
+                    "props": {
+                      "className": "button__log-in button",
+                      "href": "/"
+                    },
+                    "_store": {}
+                  },
+                  {
+                    "type": "a",
+                    "props": {
+                      "className": "button__log-in button",
+                      "href": "/signin"
+                    },
+                    "_store": {}
+                  }
+                ]
+              },
+              "_store": {}
+            },
+            {
+              "type": "form",
+              "props": {
+                "className": "container-log-in",
+                "id": "logIn",
+                "onSubmit": "[function]",
+                "children": [
+                  {
+                    "type": "div",
+                    "props": {
+                      "className": "form__log-in log-in",
+                      "children": [
+                        {
+                          "type": "div",
+                          "props": {
+                            "className": "log-in__Email form_block",
+                            "children": [
+                              {
+                                "type": "label",
+                                "props": {
+                                  "htmlFor": "email_log",
+                                  "className": "input-label"
+                                },
+                                "_store": {}
+                              },
+                              {
+                                "type": "input",
+                                "props": {
+                                  "type": "email_log",
+                                  "id": "email",
+                                  "required": true,
+                                  "value": "",
+                                  "onChange": "[function]"
+                                },
+                                "_store": {}
+                              }
+                            ]
+                          },
+                          "_store": {}
+                        },
+                        {
+                          "type": "div",
+                          "props": {
+                            "className": "log-in__password form_block",
+                            "children": [
+                              {
+                                "type": "label",
+                                "props": {
+                                  "htmlFor": "password_log",
+                                  "className": "input-label"
+                                },
+                                "_store": {}
+                              },
+                              {
+                                "type": "input",
+                                "props": {
+                                  "type": "password",
+                                  "id": "password",
+                                  "required": true,
+                                  "value": "",
+                                  "onChange": "[function]"
+                                },
+                                "_store": {}
+                              }
+                            ]
+                          },
+                          "_store": {}
+                        }
+                      ]
+                    },
+                    "_store": {}
+                  },
+                  {
+                    "type": "div",
+                    "props": {
+                      "className": "form__buttonSubmit buttonSubmit",
+                      "children": {
+                        "type": "button",
+                        "props": {
+                          "className": "buttonSubmit__log-in submit__button",
+                          "id": "submitBtn",
+                          "onClick": "[function]"
+                        },
+                        "_store": {}
+                      }
+                    },
+                    "_store": {}
+                  },
+                  {
+                    "type": "div",
+                    "props": {
+                      "className": "form__error",
+                      "id": "error"
+                    },
+                    "_store": {}
+                  }
+                ]
+              },
+              "_store": {}
+            }
+          ]
+        },
+        "rendered": [
+          {
+            "nodeType": "host",
+            "type": "div",
+            "props": {
+              "className": "container__button",
+              "action": "#",
+              "children": [
+                {
+                  "type": "a",
+                  "props": {
+                    "className": "button__log-in button",
+                    "href": "/"
+                  },
+                  "_store": {}
+                },
+                {
+                  "type": "a",
+                  "props": {
+                    "className": "button__log-in button",
+                    "href": "/signin"
+                  },
+                  "_store": {}
+                }
+              ]
+            },
+            "rendered": [
+              {
+                "nodeType": "host",
+                "type": "a",
+                "props": {
+                  "className": "button__log-in button",
+                  "href": "/"
+                }
+              },
+              {
+                "nodeType": "host",
+                "type": "a",
+                "props": {
+                  "className": "button__log-in button",
+                  "href": "/signin"
+                }
+              }
+            ]
+          },
+          {
+            "nodeType": "host",
+            "type": "form",
+            "props": {
+              "className": "container-log-in",
+              "id": "logIn",
+              "onSubmit": "[function]",
+              "children": [
+                {
+                  "type": "div",
+                  "props": {
+                    "className": "form__log-in log-in",
+                    "children": [
+                      {
+                        "type": "div",
+                        "props": {
+                          "className": "log-in__Email form_block",
+                          "children": [
+                            {
+                              "type": "label",
+                              "props": {
+                                "htmlFor": "email_log",
+                                "className": "input-label"
+                              },
+                              "_store": {}
+                            },
+                            {
+                              "type": "input",
+                              "props": {
+                                "type": "email_log",
+                                "id": "email",
+                                "required": true,
+                                "value": "",
+                                "onChange": "[function]"
+                              },
+                              "_store": {}
+                            }
+                          ]
+                        },
+                        "_store": {}
+                      },
+                      {
+                        "type": "div",
+                        "props": {
+                          "className": "log-in__password form_block",
+                          "children": [
+                            {
+                              "type": "label",
+                              "props": {
+                                "htmlFor": "password_log",
+                                "className": "input-label"
+                              },
+                              "_store": {}
+                            },
+                            {
+                              "type": "input",
+                              "props": {
+                                "type": "password",
+                                "id": "password",
+                                "required": true,
+                                "value": "",
+                                "onChange": "[function]"
+                              },
+                              "_store": {}
+                            }
+                          ]
+                        },
+                        "_store": {}
+                      }
+                    ]
+                  },
+                  "_store": {}
+                },
+                {
+                  "type": "div",
+                  "props": {
+                    "className": "form__buttonSubmit buttonSubmit",
+                    "children": {
+                      "type": "button",
+                      "props": {
+                        "className": "buttonSubmit__log-in submit__button",
+                        "id": "submitBtn",
+                        "onClick": "[function]"
+                      },
+                      "_store": {}
+                    }
+                  },
+                  "_store": {}
+                },
+                {
+                  "type": "div",
+                  "props": {
+                    "className": "form__error",
+                    "id": "error"
+                  },
+                  "_store": {}
+                }
+              ]
+            },
+            "rendered": [
+              {
+                "nodeType": "host",
+                "type": "div",
+                "props": {
+                  "className": "form__log-in log-in",
+                  "children": [
+                    {
+                      "type": "div",
+                      "props": {
+                        "className": "log-in__Email form_block",
+                        "children": [
+                          {
+                            "type": "label",
+                            "props": {
+                              "htmlFor": "email_log",
+                              "className": "input-label"
+                            },
+                            "_store": {}
+                          },
+                          {
+                            "type": "input",
+                            "props": {
+                              "type": "email_log",
+                              "id": "email",
+                              "required": true,
+                              "value": "",
+                              "onChange": "[function]"
+                            },
+                            "_store": {}
+                          }
+                        ]
+                      },
+                      "_store": {}
+                    },
+                    {
+                      "type": "div",
+                      "props": {
+                        "className": "log-in__password form_block",
+                        "children": [
+                          {
+                            "type": "label",
+                            "props": {
+                              "htmlFor": "password_log",
+                              "className": "input-label"
+                            },
+                            "_store": {}
+                          },
+                          {
+                            "type": "input",
+                            "props": {
+                              "type": "password",
+                              "id": "password",
+                              "required": true,
+                              "value": "",
+                              "onChange": "[function]"
+                            },
+                            "_store": {}
+                          }
+                        ]
+                      },
+                      "_store": {}
+                    }
+                  ]
+                },
+                "rendered": [
+                  {
+                    "nodeType": "host",
+                    "type": "div",
+                    "props": {
+                      "className": "log-in__Email form_block",
+                      "children": [
+                        {
+                          "type": "label",
+                          "props": {
+                            "htmlFor": "email_log",
+                            "className": "input-label"
+                          },
+                          "_store": {}
+                        },
+                        {
+                          "type": "input",
+                          "props": {
+                            "type": "email_log",
+                            "id": "email",
+                            "required": true,
+                            "value": "",
+                            "onChange": "[function]"
+                          },
+                          "_store": {}
+                        }
+                      ]
+                    },
+                    "rendered": [
+                      {
+                        "nodeType": "host",
+                        "type": "label",
+                        "props": {
+                          "htmlFor": "email_log",
+                          "className": "input-label"
+                        }
+                      },
+                      {
+                        "nodeType": "host",
+                        "type": "input",
+                        "props": {
+                          "type": "email_log",
+                          "id": "email",
+                          "required": true,
+                          "value": "",
+                          "onChange": "[function]"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "host",
+                    "type": "div",
+                    "props": {
+                      "className": "log-in__password form_block",
+                      "children": [
+                        {
+                          "type": "label",
+                          "props": {
+                            "htmlFor": "password_log",
+                            "className": "input-label"
+                          },
+                          "_store": {}
+                        },
+                        {
+                          "type": "input",
+                          "props": {
+                            "type": "password",
+                            "id": "password",
+                            "required": true,
+                            "value": "",
+                            "onChange": "[function]"
+                          },
+                          "_store": {}
+                        }
+                      ]
+                    },
+                    "rendered": [
+                      {
+                        "nodeType": "host",
+                        "type": "label",
+                        "props": {
+                          "htmlFor": "password_log",
+                          "className": "input-label"
+                        }
+                      },
+                      {
+                        "nodeType": "host",
+                        "type": "input",
+                        "props": {
+                          "type": "password",
+                          "id": "password",
+                          "required": true,
+                          "value": "",
+                          "onChange": "[function]"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeType": "host",
+                "type": "div",
+                "props": {
+                  "className": "form__buttonSubmit buttonSubmit",
+                  "children": {
+                    "type": "button",
+                    "props": {
+                      "className": "buttonSubmit__log-in submit__button",
+                      "id": "submitBtn",
+                      "onClick": "[function]"
+                    },
+                    "_store": {}
+                  }
+                },
+                "rendered": {
+                  "nodeType": "host",
+                  "type": "button",
+                  "props": {
+                    "className": "buttonSubmit__log-in submit__button",
+                    "id": "submitBtn",
+                    "onClick": "[function]"
+                  }
+                }
+              },
+              {
+                "nodeType": "host",
+                "type": "div",
+                "props": {
+                  "className": "form__error",
+                  "id": "error"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "type": "div",
+      "props": {
+        "className": "container",
+        "id": "container"
+      },
+      "children": [
+        {
+          "node": {
+            "nodeType": "host",
+            "type": "div",
+            "props": {
+              "className": "container__button",
+              "action": "#",
+              "children": [
+                {
+                  "type": "a",
+                  "props": {
+                    "className": "button__log-in button",
+                    "href": "/"
+                  },
+                  "_store": {}
+                },
+                {
+                  "type": "a",
+                  "props": {
+                    "className": "button__log-in button",
+                    "href": "/signin"
+                  },
+                  "_store": {}
+                }
+              ]
+            },
+            "rendered": [
+              {
+                "nodeType": "host",
+                "type": "a",
+                "props": {
+                  "className": "button__log-in button",
+                  "href": "/"
+                }
+              },
+              {
+                "nodeType": "host",
+                "type": "a",
+                "props": {
+                  "className": "button__log-in button",
+                  "href": "/signin"
+                }
+              }
+            ]
+          },
+          "type": "div",
+          "props": {
+            "className": "container__button",
+            "action": "#"
+          },
+          "children": [
+            {
+              "node": {
+                "nodeType": "host",
+                "type": "a",
+                "props": {
+                  "className": "button__log-in button",
+                  "href": "/"
+                }
+              },
+              "type": "a",
+              "props": {
+                "className": "button__log-in button",
+                "href": "/"
+              }
+            },
+            {
+              "node": {
+                "nodeType": "host",
+                "type": "a",
+                "props": {
+                  "className": "button__log-in button",
+                  "href": "/signin"
+                }
+              },
+              "type": "a",
+              "props": {
+                "className": "button__log-in button",
+                "href": "/signin"
+              }
+            }
+          ]
+        },
+        {
+          "node": {
+            "nodeType": "host",
+            "type": "form",
+            "props": {
+              "className": "container-log-in",
+              "id": "logIn",
+              "onSubmit": "[function]",
+              "children": [
+                {
+                  "type": "div",
+                  "props": {
+                    "className": "form__log-in log-in",
+                    "children": [
+                      {
+                        "type": "div",
+                        "props": {
+                          "className": "log-in__Email form_block",
+                          "children": [
+                            {
+                              "type": "label",
+                              "props": {
+                                "htmlFor": "email_log",
+                                "className": "input-label"
+                              },
+                              "_store": {}
+                            },
+                            {
+                              "type": "input",
+                              "props": {
+                                "type": "email_log",
+                                "id": "email",
+                                "required": true,
+                                "value": "",
+                                "onChange": "[function]"
+                              },
+                              "_store": {}
+                            }
+                          ]
+                        },
+                        "_store": {}
+                      },
+                      {
+                        "type": "div",
+                        "props": {
+                          "className": "log-in__password form_block",
+                          "children": [
+                            {
+                              "type": "label",
+                              "props": {
+                                "htmlFor": "password_log",
+                                "className": "input-label"
+                              },
+                              "_store": {}
+                            },
+                            {
+                              "type": "input",
+                              "props": {
+                                "type": "password",
+                                "id": "password",
+                                "required": true,
+                                "value": "",
+                                "onChange": "[function]"
+                              },
+                              "_store": {}
+                            }
+                          ]
+                        },
+                        "_store": {}
+                      }
+                    ]
+                  },
+                  "_store": {}
+                },
+                {
+                  "type": "div",
+                  "props": {
+                    "className": "form__buttonSubmit buttonSubmit",
+                    "children": {
+                      "type": "button",
+                      "props": {
+                        "className": "buttonSubmit__log-in submit__button",
+                        "id": "submitBtn",
+                        "onClick": "[function]"
+                      },
+                      "_store": {}
+                    }
+                  },
+                  "_store": {}
+                },
+                {
+                  "type": "div",
+                  "props": {
+                    "className": "form__error",
+                    "id": "error"
+                  },
+                  "_store": {}
+                }
+              ]
+            },
+            "rendered": [
+              {
+                "nodeType": "host",
+                "type": "div",
+                "props": {
+                  "className": "form__log-in log-in",
+                  "children": [
+                    {
+                      "type": "div",
+                      "props": {
+                        "className": "log-in__Email form_block",
+                        "children": [
+                          {
+                            "type": "label",
+                            "props": {
+                              "htmlFor": "email_log",
+                              "className": "input-label"
+                            },
+                            "_store": {}
+                          },
+                          {
+                            "type": "input",
+                            "props": {
+                              "type": "email_log",
+                              "id": "email",
+                              "required": true,
+                              "value": "",
+                              "onChange": "[function]"
+                            },
+                            "_store": {}
+                          }
+                        ]
+                      },
+                      "_store": {}
+                    },
+                    {
+                      "type": "div",
+                      "props": {
+                        "className": "log-in__password form_block",
+                        "children": [
+                          {
+                            "type": "label",
+                            "props": {
+                              "htmlFor": "password_log",
+                              "className": "input-label"
+                            },
+                            "_store": {}
+                          },
+                          {
+                            "type": "input",
+                            "props": {
+                              "type": "password",
+                              "id": "password",
+                              "required": true,
+                              "value": "",
+                              "onChange": "[function]"
+                            },
+                            "_store": {}
+                          }
+                        ]
+                      },
+                      "_store": {}
+                    }
+                  ]
+                },
+                "rendered": [
+                  {
+                    "nodeType": "host",
+                    "type": "div",
+                    "props": {
+                      "className": "log-in__Email form_block",
+                      "children": [
+                        {
+                          "type": "label",
+                          "props": {
+                            "htmlFor": "email_log",
+                            "className": "input-label"
+                          },
+                          "_store": {}
+                        },
+                        {
+                          "type": "input",
+                          "props": {
+                            "type": "email_log",
+                            "id": "email",
+                            "required": true,
+                            "value": "",
+                            "onChange": "[function]"
+                          },
+                          "_store": {}
+                        }
+                      ]
+                    },
+                    "rendered": [
+                      {
+                        "nodeType": "host",
+                        "type": "label",
+                        "props": {
+                          "htmlFor": "email_log",
+                          "className": "input-label"
+                        }
+                      },
+                      {
+                        "nodeType": "host",
+                        "type": "input",
+                        "props": {
+                          "type": "email_log",
+                          "id": "email",
+                          "required": true,
+                          "value": "",
+                          "onChange": "[function]"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "host",
+                    "type": "div",
+                    "props": {
+                      "className": "log-in__password form_block",
+                      "children": [
+                        {
+                          "type": "label",
+                          "props": {
+                            "htmlFor": "password_log",
+                            "className": "input-label"
+                          },
+                          "_store": {}
+                        },
+                        {
+                          "type": "input",
+                          "props": {
+                            "type": "password",
+                            "id": "password",
+                            "required": true,
+                            "value": "",
+                            "onChange": "[function]"
+                          },
+                          "_store": {}
+                        }
+                      ]
+                    },
+                    "rendered": [
+                      {
+                        "nodeType": "host",
+                        "type": "label",
+                        "props": {
+                          "htmlFor": "password_log",
+                          "className": "input-label"
+                        }
+                      },
+                      {
+                        "nodeType": "host",
+                        "type": "input",
+                        "props": {
+                          "type": "password",
+                          "id": "password",
+                          "required": true,
+                          "value": "",
+                          "onChange": "[function]"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeType": "host",
+                "type": "div",
+                "props": {
+                  "className": "form__buttonSubmit buttonSubmit",
+                  "children": {
+                    "type": "button",
+                    "props": {
+                      "className": "buttonSubmit__log-in submit__button",
+                      "id": "submitBtn",
+                      "onClick": "[function]"
+                    },
+                    "_store": {}
+                  }
+                },
+                "rendered": {
+                  "nodeType": "host",
+                  "type": "button",
+                  "props": {
+                    "className": "buttonSubmit__log-in submit__button",
+                    "id": "submitBtn",
+                    "onClick": "[function]"
+                  }
+                }
+              },
+              {
+                "nodeType": "host",
+                "type": "div",
+                "props": {
+                  "className": "form__error",
+                  "id": "error"
+                }
+              }
+            ]
+          },
+          "type": "form",
+          "props": {
+            "className": "container-log-in",
+            "id": "logIn",
+            "onSubmit": "[function]"
+          },
+          "children": [
+            {
+              "node": {
+                "nodeType": "host",
+                "type": "div",
+                "props": {
+                  "className": "form__log-in log-in",
+                  "children": [
+                    {
+                      "type": "div",
+                      "props": {
+                        "className": "log-in__Email form_block",
+                        "children": [
+                          {
+                            "type": "label",
+                            "props": {
+                              "htmlFor": "email_log",
+                              "className": "input-label"
+                            },
+                            "_store": {}
+                          },
+                          {
+                            "type": "input",
+                            "props": {
+                              "type": "email_log",
+                              "id": "email",
+                              "required": true,
+                              "value": "",
+                              "onChange": "[function]"
+                            },
+                            "_store": {}
+                          }
+                        ]
+                      },
+                      "_store": {}
+                    },
+                    {
+                      "type": "div",
+                      "props": {
+                        "className": "log-in__password form_block",
+                        "children": [
+                          {
+                            "type": "label",
+                            "props": {
+                              "htmlFor": "password_log",
+                              "className": "input-label"
+                            },
+                            "_store": {}
+                          },
+                          {
+                            "type": "input",
+                            "props": {
+                              "type": "password",
+                              "id": "password",
+                              "required": true,
+                              "value": "",
+                              "onChange": "[function]"
+                            },
+                            "_store": {}
+                          }
+                        ]
+                      },
+                      "_store": {}
+                    }
+                  ]
+                },
+                "rendered": [
+                  {
+                    "nodeType": "host",
+                    "type": "div",
+                    "props": {
+                      "className": "log-in__Email form_block",
+                      "children": [
+                        {
+                          "type": "label",
+                          "props": {
+                            "htmlFor": "email_log",
+                            "className": "input-label"
+                          },
+                          "_store": {}
+                        },
+                        {
+                          "type": "input",
+                          "props": {
+                            "type": "email_log",
+                            "id": "email",
+                            "required": true,
+                            "value": "",
+                            "onChange": "[function]"
+                          },
+                          "_store": {}
+                        }
+                      ]
+                    },
+                    "rendered": [
+                      {
+                        "nodeType": "host",
+                        "type": "label",
+                        "props": {
+                          "htmlFor": "email_log",
+                          "className": "input-label"
+                        }
+                      },
+                      {
+                        "nodeType": "host",
+                        "type": "input",
+                        "props": {
+                          "type": "email_log",
+                          "id": "email",
+                          "required": true,
+                          "value": "",
+                          "onChange": "[function]"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "host",
+                    "type": "div",
+                    "props": {
+                      "className": "log-in__password form_block",
+                      "children": [
+                        {
+                          "type": "label",
+                          "props": {
+                            "htmlFor": "password_log",
+                            "className": "input-label"
+                          },
+                          "_store": {}
+                        },
+                        {
+                          "type": "input",
+                          "props": {
+                            "type": "password",
+                            "id": "password",
+                            "required": true,
+                            "value": "",
+                            "onChange": "[function]"
+                          },
+                          "_store": {}
+                        }
+                      ]
+                    },
+                    "rendered": [
+                      {
+                        "nodeType": "host",
+                        "type": "label",
+                        "props": {
+                          "htmlFor": "password_log",
+                          "className": "input-label"
+                        }
+                      },
+                      {
+                        "nodeType": "host",
+                        "type": "input",
+                        "props": {
+                          "type": "password",
+                          "id": "password",
+                          "required": true,
+                          "value": "",
+                          "onChange": "[function]"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "type": "div",
+              "props": {
+                "className": "form__log-in log-in"
+              },
+              "children": [
+                {
+                  "node": {
+                    "nodeType": "host",
+                    "type": "div",
+                    "props": {
+                      "className": "log-in__Email form_block",
+                      "children": [
+                        {
+                          "type": "label",
+                          "props": {
+                            "htmlFor": "email_log",
+                            "className": "input-label"
+                          },
+                          "_store": {}
+                        },
+                        {
+                          "type": "input",
+                          "props": {
+                            "type": "email_log",
+                            "id": "email",
+                            "required": true,
+                            "value": "",
+                            "onChange": "[function]"
+                          },
+                          "_store": {}
+                        }
+                      ]
+                    },
+                    "rendered": [
+                      {
+                        "nodeType": "host",
+                        "type": "label",
+                        "props": {
+                          "htmlFor": "email_log",
+                          "className": "input-label"
+                        }
+                      },
+                      {
+                        "nodeType": "host",
+                        "type": "input",
+                        "props": {
+                          "type": "email_log",
+                          "id": "email",
+                          "required": true,
+                          "value": "",
+                          "onChange": "[function]"
+                        }
+                      }
+                    ]
+                  },
+                  "type": "div",
+                  "props": {
+                    "className": "log-in__Email form_block"
+                  },
+                  "children": [
+                    {
+                      "node": {
+                        "nodeType": "host",
+                        "type": "label",
+                        "props": {
+                          "htmlFor": "email_log",
+                          "className": "input-label"
+                        }
+                      },
+                      "type": "label",
+                      "props": {
+                        "htmlFor": "email_log",
+                        "className": "input-label"
+                      }
+                    },
+                    {
+                      "node": {
+                        "nodeType": "host",
+                        "type": "input",
+                        "props": {
+                          "type": "email_log",
+                          "id": "email",
+                          "required": true,
+                          "value": "",
+                          "onChange": "[function]"
+                        }
+                      },
+                      "type": "input",
+                      "props": {
+                        "type": "email_log",
+                        "id": "email",
+                        "required": true,
+                        "value": "",
+                        "onChange": "[function]"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "node": {
+                    "nodeType": "host",
+                    "type": "div",
+                    "props": {
+                      "className": "log-in__password form_block",
+                      "children": [
+                        {
+                          "type": "label",
+                          "props": {
+                            "htmlFor": "password_log",
+                            "className": "input-label"
+                          },
+                          "_store": {}
+                        },
+                        {
+                          "type": "input",
+                          "props": {
+                            "type": "password",
+                            "id": "password",
+                            "required": true,
+                            "value": "",
+                            "onChange": "[function]"
+                          },
+                          "_store": {}
+                        }
+                      ]
+                    },
+                    "rendered": [
+                      {
+                        "nodeType": "host",
+                        "type": "label",
+                        "props": {
+                          "htmlFor": "password_log",
+                          "className": "input-label"
+                        }
+                      },
+                      {
+                        "nodeType": "host",
+                        "type": "input",
+                        "props": {
+                          "type": "password",
+                          "id": "password",
+                          "required": true,
+                          "value": "",
+                          "onChange": "[function]"
+                        }
+                      }
+                    ]
+                  },
+                  "type": "div",
+                  "props": {
+                    "className": "log-in__password form_block"
+                  },
+                  "children": [
+                    {
+                      "node": {
+                        "nodeType": "host",
+                        "type": "label",
+                        "props": {
+                          "htmlFor": "password_log",
+                          "className": "input-label"
+                        }
+                      },
+                      "type": "label",
+                      "props": {
+                        "htmlFor": "password_log",
+                        "className": "input-label"
+                      }
+                    },
+                    {
+                      "node": {
+                        "nodeType": "host",
+                        "type": "input",
+                        "props": {
+                          "type": "password",
+                          "id": "password",
+                          "required": true,
+                          "value": "",
+                          "onChange": "[function]"
+                        }
+                      },
+                      "type": "input",
+                      "props": {
+                        "type": "password",
+                        "id": "password",
+                        "required": true,
+                        "value": "",
+                        "onChange": "[function]"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "node": {
+                "nodeType": "host",
+                "type": "div",
+                "props": {
+                  "className": "form__buttonSubmit buttonSubmit",
+                  "children": {
+                    "type": "button",
+                    "props": {
+                      "className": "buttonSubmit__log-in submit__button",
+                      "id": "submitBtn",
+                      "onClick": "[function]"
+                    },
+                    "_store": {}
+                  }
+                },
+                "rendered": {
+                  "nodeType": "host",
+                  "type": "button",
+                  "props": {
+                    "className": "buttonSubmit__log-in submit__button",
+                    "id": "submitBtn",
+                    "onClick": "[function]"
+                  }
+                }
+              },
+              "type": "div",
+              "props": {
+                "className": "form__buttonSubmit buttonSubmit"
+              },
+              "children": [
+                {
+                  "node": {
+                    "nodeType": "host",
+                    "type": "button",
+                    "props": {
+                      "className": "buttonSubmit__log-in submit__button",
+                      "id": "submitBtn",
+                      "onClick": "[function]"
+                    }
+                  },
+                  "type": "button",
+                  "props": {
+                    "className": "buttonSubmit__log-in submit__button",
+                    "id": "submitBtn",
+                    "onClick": "[function]"
+                  }
+                }
+              ]
+            },
+            {
+              "node": {
+                "nodeType": "host",
+                "type": "div",
+                "props": {
+                  "className": "form__error",
+                  "id": "error"
+                }
+              },
+              "type": "div",
+              "props": {
+                "className": "form__error",
+                "id": "error"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
+

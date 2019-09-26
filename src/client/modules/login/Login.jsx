@@ -109,7 +109,7 @@ export default class Login extends Component {
 }
 
 Login.propTypes = {
-    t: PropTypes.func.isRequired,
+    t: PropTypes.func,
     addActiveUser: PropTypes.func,
     handleLogin: PropTypes.func.isRequired,
 };

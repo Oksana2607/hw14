@@ -3,7 +3,8 @@ import {UsersTable} from './components/usersTable';
 import {Chat} from './components/chat';
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {withTranslation} from "react-i18next";
+// import {withTranslation} from 'react-i18next';
+import withAuthorization from '../../hoc/withAuthorization';
 
 let ws = null;
 
@@ -76,8 +77,6 @@ class Main extends Component {
         // this.dialogWindowScrollDown();
     };
 
-
-
     getAllUsers = () => {
         fetch('http://localhost:8080/users', {
             method: 'POST', // или 'PUT'
@@ -92,7 +91,7 @@ class Main extends Component {
                     this.addUsers(response);
                 },
                 (error) => {
-                    alert(`Error:${error}`);
+                    alert(`Error321:${error}`);
                 });
     };
 
@@ -252,9 +251,8 @@ class Main extends Component {
                 </div>
             </div>
         );
-    };
-
-};
+    }
+}
 // Main.propTypes = {
 //     t: PropTypes.func.isRequired,
 //     users: PropTypes.array.isRequired,
@@ -276,4 +274,5 @@ class Main extends Component {
 //     closeMenu: PropTypes.func.isRequired,
 // };
 
-export default React.memo(withTranslation('common')(Main));
+// export default React.memo(withTranslation('common')(Main));
+export default withAuthorization(React.memo(Main));

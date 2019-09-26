@@ -1,0 +1,36 @@
+exports["Main snapshot/should render correctly(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "Main",
+    "props": {
+      "user": {},
+      "users": [],
+      "logOut": "logOut",
+      "activeUsers": [],
+      "messages": [],
+      "addMessage": "addMessage",
+      "activeComponent": "",
+      "toggleTheme": "toggleTheme",
+      "changeActiveComponent": "changeActiveComponent",
+      "t": "[function]",
+      "i18n": {},
+      "tReady": false
+    }
+  },
+  "type": "Main",
+  "props": {
+    "user": {},
+    "users": [],
+    "logOut": "logOut",
+    "activeUsers": [],
+    "messages": [],
+    "addMessage": "addMessage",
+    "activeComponent": "",
+    "toggleTheme": "toggleTheme",
+    "changeActiveComponent": "changeActiveComponent",
+    "t": "[function]",
+    "i18n": {},
+    "tReady": false
+  }
+};
+

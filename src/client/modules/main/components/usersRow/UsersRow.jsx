@@ -44,7 +44,7 @@ export const UsersRow = (props) => {
     }
 };
 UsersRow.propTypes = {
-    t: PropTypes.func.isRequired,
+    t: PropTypes.func,
     user: PropTypes.object.isRequired,
     my_user: PropTypes.object.isRequired,
     activeUsers: PropTypes.array.isRequired,

@@ -1,0 +1,590 @@
+exports["UsersTable snapshot/should render correctly(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "div",
+    "props": {
+      "className": "users__table",
+      "id": "usersTable",
+      "children": {
+        "type": "table",
+        "props": {
+          "className": "users__table table",
+          "id": "table",
+          "children": [
+            {
+              "type": "thead",
+              "props": {
+                "className": "table__header header",
+                "children": {
+                  "type": "tr",
+                  "props": {
+                    "className": "header",
+                    "children": [
+                      {
+                        "type": "th",
+                        "props": {},
+                        "_store": {}
+                      },
+                      {
+                        "type": "th",
+                        "props": {},
+                        "_store": {}
+                      },
+                      {
+                        "type": "th",
+                        "props": {},
+                        "_store": {}
+                      },
+                      {
+                        "type": "th",
+                        "props": {},
+                        "_store": {}
+                      }
+                    ]
+                  },
+                  "_store": {}
+                }
+              },
+              "_store": {}
+            },
+            {
+              "type": "tbody",
+              "props": {
+                "className": "table__body body",
+                "children": []
+              },
+              "_store": {}
+            }
+          ]
+        },
+        "_store": {}
+      }
+    },
+    "rendered": {
+      "nodeType": "host",
+      "type": "table",
+      "props": {
+        "className": "users__table table",
+        "id": "table",
+        "children": [
+          {
+            "type": "thead",
+            "props": {
+              "className": "table__header header",
+              "children": {
+                "type": "tr",
+                "props": {
+                  "className": "header",
+                  "children": [
+                    {
+                      "type": "th",
+                      "props": {},
+                      "_store": {}
+                    },
+                    {
+                      "type": "th",
+                      "props": {},
+                      "_store": {}
+                    },
+                    {
+                      "type": "th",
+                      "props": {},
+                      "_store": {}
+                    },
+                    {
+                      "type": "th",
+                      "props": {},
+                      "_store": {}
+                    }
+                  ]
+                },
+                "_store": {}
+              }
+            },
+            "_store": {}
+          },
+          {
+            "type": "tbody",
+            "props": {
+              "className": "table__body body",
+              "children": []
+            },
+            "_store": {}
+          }
+        ]
+      },
+      "rendered": [
+        {
+          "nodeType": "host",
+          "type": "thead",
+          "props": {
+            "className": "table__header header",
+            "children": {
+              "type": "tr",
+              "props": {
+                "className": "header",
+                "children": [
+                  {
+                    "type": "th",
+                    "props": {},
+                    "_store": {}
+                  },
+                  {
+                    "type": "th",
+                    "props": {},
+                    "_store": {}
+                  },
+                  {
+                    "type": "th",
+                    "props": {},
+                    "_store": {}
+                  },
+                  {
+                    "type": "th",
+                    "props": {},
+                    "_store": {}
+                  }
+                ]
+              },
+              "_store": {}
+            }
+          },
+          "rendered": {
+            "nodeType": "host",
+            "type": "tr",
+            "props": {
+              "className": "header",
+              "children": [
+                {
+                  "type": "th",
+                  "props": {},
+                  "_store": {}
+                },
+                {
+                  "type": "th",
+                  "props": {},
+                  "_store": {}
+                },
+                {
+                  "type": "th",
+                  "props": {},
+                  "_store": {}
+                },
+                {
+                  "type": "th",
+                  "props": {},
+                  "_store": {}
+                }
+              ]
+            },
+            "rendered": [
+              {
+                "nodeType": "host",
+                "type": "th",
+                "props": {}
+              },
+              {
+                "nodeType": "host",
+                "type": "th",
+                "props": {}
+              },
+              {
+                "nodeType": "host",
+                "type": "th",
+                "props": {}
+              },
+              {
+                "nodeType": "host",
+                "type": "th",
+                "props": {}
+              }
+            ]
+          }
+        },
+        {
+          "nodeType": "host",
+          "type": "tbody",
+          "props": {
+            "className": "table__body body",
+            "children": []
+          },
+          "rendered": []
+        }
+      ]
+    }
+  },
+  "type": "div",
+  "props": {
+    "className": "users__table",
+    "id": "usersTable"
+  },
+  "children": [
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "table",
+        "props": {
+          "className": "users__table table",
+          "id": "table",
+          "children": [
+            {
+              "type": "thead",
+              "props": {
+                "className": "table__header header",
+                "children": {
+                  "type": "tr",
+                  "props": {
+                    "className": "header",
+                    "children": [
+                      {
+                        "type": "th",
+                        "props": {},
+                        "_store": {}
+                      },
+                      {
+                        "type": "th",
+                        "props": {},
+                        "_store": {}
+                      },
+                      {
+                        "type": "th",
+                        "props": {},
+                        "_store": {}
+                      },
+                      {
+                        "type": "th",
+                        "props": {},
+                        "_store": {}
+                      }
+                    ]
+                  },
+                  "_store": {}
+                }
+              },
+              "_store": {}
+            },
+            {
+              "type": "tbody",
+              "props": {
+                "className": "table__body body",
+                "children": []
+              },
+              "_store": {}
+            }
+          ]
+        },
+        "rendered": [
+          {
+            "nodeType": "host",
+            "type": "thead",
+            "props": {
+              "className": "table__header header",
+              "children": {
+                "type": "tr",
+                "props": {
+                  "className": "header",
+                  "children": [
+                    {
+                      "type": "th",
+                      "props": {},
+                      "_store": {}
+                    },
+                    {
+                      "type": "th",
+                      "props": {},
+                      "_store": {}
+                    },
+                    {
+                      "type": "th",
+                      "props": {},
+                      "_store": {}
+                    },
+                    {
+                      "type": "th",
+                      "props": {},
+                      "_store": {}
+                    }
+                  ]
+                },
+                "_store": {}
+              }
+            },
+            "rendered": {
+              "nodeType": "host",
+              "type": "tr",
+              "props": {
+                "className": "header",
+                "children": [
+                  {
+                    "type": "th",
+                    "props": {},
+                    "_store": {}
+                  },
+                  {
+                    "type": "th",
+                    "props": {},
+                    "_store": {}
+                  },
+                  {
+                    "type": "th",
+                    "props": {},
+                    "_store": {}
+                  },
+                  {
+                    "type": "th",
+                    "props": {},
+                    "_store": {}
+                  }
+                ]
+              },
+              "rendered": [
+                {
+                  "nodeType": "host",
+                  "type": "th",
+                  "props": {}
+                },
+                {
+                  "nodeType": "host",
+                  "type": "th",
+                  "props": {}
+                },
+                {
+                  "nodeType": "host",
+                  "type": "th",
+                  "props": {}
+                },
+                {
+                  "nodeType": "host",
+                  "type": "th",
+                  "props": {}
+                }
+              ]
+            }
+          },
+          {
+            "nodeType": "host",
+            "type": "tbody",
+            "props": {
+              "className": "table__body body",
+              "children": []
+            },
+            "rendered": []
+          }
+        ]
+      },
+      "type": "table",
+      "props": {
+        "className": "users__table table",
+        "id": "table"
+      },
+      "children": [
+        {
+          "node": {
+            "nodeType": "host",
+            "type": "thead",
+            "props": {
+              "className": "table__header header",
+              "children": {
+                "type": "tr",
+                "props": {
+                  "className": "header",
+                  "children": [
+                    {
+                      "type": "th",
+                      "props": {},
+                      "_store": {}
+                    },
+                    {
+                      "type": "th",
+                      "props": {},
+                      "_store": {}
+                    },
+                    {
+                      "type": "th",
+                      "props": {},
+                      "_store": {}
+                    },
+                    {
+                      "type": "th",
+                      "props": {},
+                      "_store": {}
+                    }
+                  ]
+                },
+                "_store": {}
+              }
+            },
+            "rendered": {
+              "nodeType": "host",
+              "type": "tr",
+              "props": {
+                "className": "header",
+                "children": [
+                  {
+                    "type": "th",
+                    "props": {},
+                    "_store": {}
+                  },
+                  {
+                    "type": "th",
+                    "props": {},
+                    "_store": {}
+                  },
+                  {
+                    "type": "th",
+                    "props": {},
+                    "_store": {}
+                  },
+                  {
+                    "type": "th",
+                    "props": {},
+                    "_store": {}
+                  }
+                ]
+              },
+              "rendered": [
+                {
+                  "nodeType": "host",
+                  "type": "th",
+                  "props": {}
+                },
+                {
+                  "nodeType": "host",
+                  "type": "th",
+                  "props": {}
+                },
+                {
+                  "nodeType": "host",
+                  "type": "th",
+                  "props": {}
+                },
+                {
+                  "nodeType": "host",
+                  "type": "th",
+                  "props": {}
+                }
+              ]
+            }
+          },
+          "type": "thead",
+          "props": {
+            "className": "table__header header"
+          },
+          "children": [
+            {
+              "node": {
+                "nodeType": "host",
+                "type": "tr",
+                "props": {
+                  "className": "header",
+                  "children": [
+                    {
+                      "type": "th",
+                      "props": {},
+                      "_store": {}
+                    },
+                    {
+                      "type": "th",
+                      "props": {},
+                      "_store": {}
+                    },
+                    {
+                      "type": "th",
+                      "props": {},
+                      "_store": {}
+                    },
+                    {
+                      "type": "th",
+                      "props": {},
+                      "_store": {}
+                    }
+                  ]
+                },
+                "rendered": [
+                  {
+                    "nodeType": "host",
+                    "type": "th",
+                    "props": {}
+                  },
+                  {
+                    "nodeType": "host",
+                    "type": "th",
+                    "props": {}
+                  },
+                  {
+                    "nodeType": "host",
+                    "type": "th",
+                    "props": {}
+                  },
+                  {
+                    "nodeType": "host",
+                    "type": "th",
+                    "props": {}
+                  }
+                ]
+              },
+              "type": "tr",
+              "props": {
+                "className": "header"
+              },
+              "children": [
+                {
+                  "node": {
+                    "nodeType": "host",
+                    "type": "th",
+                    "props": {}
+                  },
+                  "type": "th",
+                  "props": {}
+                },
+                {
+                  "node": {
+                    "nodeType": "host",
+                    "type": "th",
+                    "props": {}
+                  },
+                  "type": "th",
+                  "props": {}
+                },
+                {
+                  "node": {
+                    "nodeType": "host",
+                    "type": "th",
+                    "props": {}
+                  },
+                  "type": "th",
+                  "props": {}
+                },
+                {
+                  "node": {
+                    "nodeType": "host",
+                    "type": "th",
+                    "props": {}
+                  },
+                  "type": "th",
+                  "props": {}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "node": {
+            "nodeType": "host",
+            "type": "tbody",
+            "props": {
+              "className": "table__body body",
+              "children": []
+            },
+            "rendered": []
+          },
+          "type": "tbody",
+          "props": {
+            "className": "table__body body"
+          }
+        }
+      ]
+    }
+  ]
+};
+
