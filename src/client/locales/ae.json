@@ -1,0 +1,21 @@
+{
+  "ae": {
+    "send": "إرسال",
+    "login": "دخول",
+    "eMail": "بريد",
+    "name": "الاسم الأول",
+    "signIn": "تسجيل",
+    "logOut": "تسجيل خروج",
+    "users": "المستخدمين",
+    "yourEmail": "بريدك",
+    "password": "كلمة المرور",
+    "yourMessage": "رسالتك",
+    "yourPassword": "كلمة مرورك",
+    "confirmPassword": "أعد كتابة كلمة المرور",
+    "chat": "غرفة الدردشة",
+    "status": "وضع",
+    "privateChat": "دردشة خاصة",
+    "submit": "تقديم",
+    "ToggleTheme": "تبديل الموضوع"
+  }
+}

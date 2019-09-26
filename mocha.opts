@@ -1,0 +1,4 @@
+--colors
+--recursive
+src/**/*.UsersRow.test.js
+-r ./testConfig/mocha-setup.js

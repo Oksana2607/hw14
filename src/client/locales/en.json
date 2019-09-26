@@ -1,0 +1,21 @@
+{
+  "en": {
+    "name": "Name",
+    "send": "SEND",
+    "login": "Login",
+    "logOut": "Log out",
+    "users": "Users",
+    "eMail": "E-mail",
+    "signIn": "Sign in",
+    "password": "Password",
+    "yourEmail": "Your email",
+    "yourMessage": "Your message",
+    "yourPassword": "Your password",
+    "confirmPassword": "Confirm Password",
+    "chat": "Chat",
+    "status": "Status",
+    "privateChat": "Private Chat",
+    "submit": "Submit",
+    "ToggleTheme": "ToggleTheme"
+  }
+}

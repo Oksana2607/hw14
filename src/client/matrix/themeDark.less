@@ -1,0 +1,248 @@
+.dark {
+  //colors
+  @color_1: #f9f9f9;
+  @color_2: #2d374d;
+  @color_3: #eee;
+  @color_4: black;
+  @color_5: #46a6ac;
+  @color_6: #0000006e;
+  @color_7: #0000009c;
+  @color_8: #fff4fd;
+  @color_9: rgba(158, 158, 158, 0.35);
+  @color_10: #3b475d;
+  @color_11: #ccc;
+  @color_12: #a7dcff;
+  @color_13: #ccd0d4;
+  @color_14: green;
+  @color_15: #0000004d;
+  @color_16: #555;
+  @color_17: red;
+  @color_18: rgba(0, 0, 0, .075);
+  @color_19: #333333;
+  @color_20: #60a5b9;
+
+
+  //gradients
+  @gradient_1: linear-gradient(to right, rgb(60, 102, 97) 0%, rgb(108, 137, 100) 76%, rgba(156, 141, 94, 1) 100%);
+  @gradient_2: linear-gradient(90deg, #3c6661, #23c417);
+  @gradient_3: linear-gradient(90deg, #2937ff, #d8d5ff);
+  @gradient_4: linear-gradient(90deg, #2937ff, #2937ff);
+  @gradient_5: #1e2532;
+
+  @background_table_active: #ff8f4a;
+  @background_table_offline: #525b9a;
+  @background_1: #1e2434;
+
+  @borderColor_1: #a7dcff rgba(226, 0, 0, 0) rgba(90, 90, 90, 0) rgba(255, 255, 255, 0);
+  @borderColor_2: #ccd0d4 rgba(226, 0, 0, 0) rgba(90, 90, 90, 0) rgba(255, 255, 255, 0);
+  @border_1: 1px solid #0000007d;
+
+
+  .wrapper-login {
+    box-shadow: inset 0px -20px 20px -14px @color_6;
+  }
+
+  .container {
+    background-color: #2d374d;
+    box-shadow: 0px 0px 16px -4px @color_15;
+  }
+
+  .button:focus, .button:hover {
+    background-color: @color_10;
+  }
+
+  .button {
+    color: @color_1;
+    text-shadow: 0px 0px 6px #000000;
+    background-color: #1e2532;
+    border-color: @color_2;
+  }
+
+  .submit__button {
+    text-shadow: 0px 0px 6px #000000;
+    color: #f9f9f9;
+    background-color: #1e2434;
+    border-color: #46a6ac;
+  }
+  .input-label{
+    color: white;
+  }
+  input {
+    color: @color_16;
+    background-color: @color_1;
+    background-image: none;
+    border: 1px solid @color_11;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px @color_18;
+  }
+
+  body {
+    background: @gradient_5;
+  }
+
+  h1 {
+    color: @color_1;
+    text-shadow: 0px 0px 6px #000000;
+  }
+
+  #nameActive,
+  #emailActive {
+    color: @color_1;
+    text-shadow: 0px 0px 6px #000000;
+  }
+
+  .chat__title {
+    color: @color_1;
+    background-color: @color_2;
+    text-shadow: 0px 0px 6px #000000;
+  }
+
+  .chat__body {
+    background-color: @color_2;
+    border: 1px solid @color_2;
+  }
+
+  .chat__content {
+    box-shadow: inset 0px -2px 12px -8px @color_4;
+  }
+
+  .chat__footer {
+    box-shadow: inset 0px -1px 12px -8px @color_4;
+  }
+
+  .chat__input {
+    border: solid 1px @color_2;
+  }
+
+  #sendBtn {
+    text-shadow: 0px 0px 6px #000000;
+    color: @color_1;
+    background-color: @background_1;
+    border-color: @color_5;
+  }
+
+  .users-chat {
+    color: @color_2;
+  }
+
+  .outgoing {
+    color: #dae0c9;
+    background-color: #333333;
+    text-shadow: 0px 0px 4px #0000003b;
+  }
+
+  .outgoing:after {
+    border: 11px solid;
+    border-color: #333333 #e2000000 #5a5a5a00 #ffffff00;
+  }
+
+  .incoming {
+    color: #dae0c9;
+    background-color: #3c8065;
+    text-shadow: 0px 0px 4px #0000003b;
+  }
+
+  .incoming:after {
+    border: 11px solid;
+    border-color: #3c8065 #e2000000 #5a5a5a00 #ffffff00;
+  }
+
+  .system-message {
+    color: @color_14;
+  }
+
+  .private_chat {
+    text-shadow: 0px 0px 6px #000000;
+    color: @color_1;
+    background-color: @background_1;
+    border-color: @color_5;
+  }
+
+  .table__header {
+    background-color: @color_2;
+    color: @color_1;
+    text-shadow: 0px 0px 6px #000000;
+  }
+
+  .table__body {
+    background-color: @color_3;
+  }
+
+  .table__body-statusActive {
+    background-color: @color_14;
+  }
+
+  .table__body-statusOffline {
+    background-color: @color_17;
+  }
+
+  .button:focus, .button:hover {
+    background-color: @color_10;
+  }
+
+  input {
+    color: #333;
+    background-color: @color_1;
+    border: 1px solid @color_11;
+    box-shadow: inset 0 1px 1px @color_18;
+  }
+
+  .toggleTheme {
+    color: @color_1;
+    text-shadow: 0px 0px 6px #000000;
+    background-color: @color_2;
+    border-color: @color_2;
+  }
+
+  #usersBtn,
+  #chatBtn,
+  #logoutBtn {
+    color: @color_1;
+    text-shadow: 0px 0px 6px #000000;
+    background-color: @color_2;
+    border-color: @color_2;
+  }
+
+  .table__body {
+    background-color: @color_2;
+    color: @color_1;
+    text-shadow: 0px 0px 6px #000000;
+  }
+
+  .table__body-statusActive {
+    background-color: @background_table_active;
+    border: @border_1;
+  }
+
+  .table__body-statusOffline {
+    background-color: @background_table_offline;
+    border: @border_1;
+  }
+
+  .chat__content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #2d374d;
+  }
+
+  .chat__content::-webkit-scrollbar {
+    width: 12px;
+    background-color: #2d374d;
+  }
+
+  .chat__content::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #358591;
+  }
+  .getEmojiButton{
+    color: white;
+    width: 30px;
+    display: block;
+    text-align: center;
+  }
+}
+
+
+
+
